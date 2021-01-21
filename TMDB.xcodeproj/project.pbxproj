@@ -12,6 +12,7 @@
 		2C8AE49E29DF60E6CEC44DC3 /* Pods_TMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1DCAE09566687908A77977 /* Pods_TMDB.framework */; };
 		7C74F14D25B9E1BC00181619 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74F14C25B9E1BC00181619 /* RegisterVC.swift */; };
 		7C74F15225B9E3CD00181619 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74F15125B9E3CD00181619 /* LoginVC.swift */; };
+		7C90D4F225BA293A00C015F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90D4F125BA293A00C015F8 /* Constants.swift */; };
 		7CEDBAB925A8B6430051CD11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDBAB825A8B6430051CD11 /* AppDelegate.swift */; };
 		7CEDBABB25A8B6430051CD11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDBABA25A8B6430051CD11 /* SceneDelegate.swift */; };
 		7CEDBABD25A8B6430051CD11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDBABC25A8B6430051CD11 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		6E7D09014AEB5BEB90C5B18A /* Pods-TMDB-TMDBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB-TMDBUITests.release.xcconfig"; path = "Target Support Files/Pods-TMDB-TMDBUITests/Pods-TMDB-TMDBUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7C74F14C25B9E1BC00181619 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		7C74F15125B9E3CD00181619 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		7C90D4F125BA293A00C015F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7CEDBAB525A8B6430051CD11 /* TMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEDBAB825A8B6430051CD11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CEDBABA25A8B6430051CD11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7C90D4F025BA292F00C015F8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7C90D4F125BA293A00C015F8 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		7CEDBAAC25A8B6430051CD11 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		7CEDBAB725A8B6430051CD11 /* TMDB */ = {
 			isa = PBXGroup;
 			children = (
+				7C90D4F025BA292F00C015F8 /* Constants */,
 				7CEDBAF025A8B7A30051CD11 /* Model */,
 				7CEDBAEF25A8B79C0051CD11 /* View */,
 				7CEDBAEE25A8B7910051CD11 /* Controller */,
@@ -447,6 +458,7 @@
 				7CEDBABD25A8B6430051CD11 /* ViewController.swift in Sources */,
 				7C74F15225B9E3CD00181619 /* LoginVC.swift in Sources */,
 				7CEDBAB925A8B6430051CD11 /* AppDelegate.swift in Sources */,
+				7C90D4F225BA293A00C015F8 /* Constants.swift in Sources */,
 				7CEDBABB25A8B6430051CD11 /* SceneDelegate.swift in Sources */,
 				7C74F14D25B9E1BC00181619 /* RegisterVC.swift in Sources */,
 			);
