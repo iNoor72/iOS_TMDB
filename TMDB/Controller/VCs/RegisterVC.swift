@@ -14,10 +14,11 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    
+    @IBOutlet weak var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerButton.layer.cornerRadius = 16.0
     }
 
 

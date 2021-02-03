@@ -12,10 +12,12 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.layer.cornerRadius = 16.0
     }
     
     @IBAction func loginBtnPressed(_ sender: UIButton){
