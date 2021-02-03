@@ -14,10 +14,11 @@
 		7C20406D25CA105F009BF3FA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C20406C25CA105F009BF3FA /* HomeVC.swift */; };
 		7C74F14D25B9E1BC00181619 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74F14C25B9E1BC00181619 /* RegisterVC.swift */; };
 		7C74F15225B9E3CD00181619 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74F15125B9E3CD00181619 /* LoginVC.swift */; };
+		7C7FE57A25CB15E3006E9BCA /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FE57925CB15E3006E9BCA /* APIResponse.swift */; };
+		7C7FE58325CB16A9006E9BCA /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FE58225CB16A9006E9BCA /* StartVC.swift */; };
 		7C90D4F225BA293A00C015F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90D4F125BA293A00C015F8 /* Constants.swift */; };
 		7CEDBAB925A8B6430051CD11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDBAB825A8B6430051CD11 /* AppDelegate.swift */; };
 		7CEDBABB25A8B6430051CD11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDBABA25A8B6430051CD11 /* SceneDelegate.swift */; };
-		7CEDBABD25A8B6430051CD11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDBABC25A8B6430051CD11 /* ViewController.swift */; };
 		7CEDBAC025A8B6430051CD11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CEDBABE25A8B6430051CD11 /* Main.storyboard */; };
 		7CEDBAC325A8B6430051CD11 /* TMDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDBAC125A8B6430051CD11 /* TMDB.xcdatamodeld */; };
 		7CEDBAC525A8B6440051CD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CEDBAC425A8B6440051CD11 /* Assets.xcassets */; };
@@ -54,11 +55,12 @@
 		7C20406C25CA105F009BF3FA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7C74F14C25B9E1BC00181619 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		7C74F15125B9E3CD00181619 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		7C7FE57925CB15E3006E9BCA /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		7C7FE58225CB16A9006E9BCA /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		7C90D4F125BA293A00C015F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7CEDBAB525A8B6430051CD11 /* TMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEDBAB825A8B6430051CD11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CEDBABA25A8B6430051CD11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7CEDBABC25A8B6430051CD11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CEDBABF25A8B6430051CD11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CEDBAC225A8B6430051CD11 /* TMDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TMDB.xcdatamodel; sourceTree = "<group>"; };
 		7CEDBAC425A8B6440051CD11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,9 +123,19 @@
 		7C20406B25CA1049009BF3FA /* Tabbar Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C20406625CA0F8E009BF3FA /* TMDBVC.swift */,
 				7C20406C25CA105F009BF3FA /* HomeVC.swift */,
 			);
 			path = "Tabbar Controller";
+			sourceTree = "<group>";
+		};
+		7C7FE57E25CB1638006E9BCA /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				7C74F14C25B9E1BC00181619 /* RegisterVC.swift */,
+				7C74F15125B9E3CD00181619 /* LoginVC.swift */,
+			);
+			path = VCs;
 			sourceTree = "<group>";
 		};
 		7C90D4F025BA292F00C015F8 /* Constants */ = {
@@ -194,11 +206,9 @@
 		7CEDBAEE25A8B7910051CD11 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C7FE57E25CB1638006E9BCA /* VCs */,
 				7C20406B25CA1049009BF3FA /* Tabbar Controller */,
-				7CEDBABC25A8B6430051CD11 /* ViewController.swift */,
-				7C74F14C25B9E1BC00181619 /* RegisterVC.swift */,
-				7C74F15125B9E3CD00181619 /* LoginVC.swift */,
-				7C20406625CA0F8E009BF3FA /* TMDBVC.swift */,
+				7C7FE58225CB16A9006E9BCA /* StartVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,6 +225,7 @@
 		7CEDBAF025A8B7A30051CD11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7C7FE57925CB15E3006E9BCA /* APIResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -469,10 +480,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CEDBAC325A8B6430051CD11 /* TMDB.xcdatamodeld in Sources */,
-				7CEDBABD25A8B6430051CD11 /* ViewController.swift in Sources */,
 				7C74F15225B9E3CD00181619 /* LoginVC.swift in Sources */,
+				7C7FE57A25CB15E3006E9BCA /* APIResponse.swift in Sources */,
 				7C20406D25CA105F009BF3FA /* HomeVC.swift in Sources */,
 				7CEDBAB925A8B6430051CD11 /* AppDelegate.swift in Sources */,
+				7C7FE58325CB16A9006E9BCA /* StartVC.swift in Sources */,
 				7C90D4F225BA293A00C015F8 /* Constants.swift in Sources */,
 				7CEDBABB25A8B6430051CD11 /* SceneDelegate.swift in Sources */,
 				7C74F14D25B9E1BC00181619 /* RegisterVC.swift in Sources */,

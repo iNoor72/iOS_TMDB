@@ -12,7 +12,7 @@
         <!--TMDB-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartVC" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,6 +86,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TMDB" id="Qp4-va-Ule"/>
+                    <connections>
+                        <outlet property="loginButton" destination="fCW-KO-BK1" id="h5N-6M-3Ic"/>
+                        <outlet property="registerButton" destination="u1o-Ct-OMt" id="JfE-dc-KOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

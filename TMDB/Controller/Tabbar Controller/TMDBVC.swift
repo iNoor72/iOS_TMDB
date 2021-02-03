@@ -11,6 +11,7 @@ class TMDBVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Hello from tabbar")
     }
     
     
