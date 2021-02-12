@@ -1,5 +1,5 @@
 //
-//  APIResponse.swift
+//  URLSession_Networking.swift
 //  TMDB
 //
 //  Created by Noor Walid on 03/02/2021.
@@ -7,15 +7,11 @@
 
 import Foundation
 
-struct APIResponse {
+struct URLSession_Networking {
     let popularURL = "https://api.themoviedb.org/3/movie/popular?api_key=\(Constants.API_key)&language=en-US&page=1"
-    let topRatedURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=\(Constants.API_key)&language=en-US&page=1"
-    let nowPlayingURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=\(Constants.API_key)&language=en-US&page=1"
     
     func fetchData() {
         performFetching(urlString: popularURL)
-        performFetching(urlString: topRatedURL)
-        performFetching(urlString: nowPlayingURL)
     }
     
     func performFetching(urlString: String){
