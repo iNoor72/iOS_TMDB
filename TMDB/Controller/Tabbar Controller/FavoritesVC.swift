@@ -17,7 +17,6 @@ class FavoritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
     
     //MARK: Delegation
@@ -33,9 +32,9 @@ class FavoritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.FavCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.FavCell, for: indexPath) as! FavCell
         
-        cell.textLabel?.text = array[indexPath.row]
+        //cell.movieName.text = array[indexPath.row]
         return cell
     }
     
