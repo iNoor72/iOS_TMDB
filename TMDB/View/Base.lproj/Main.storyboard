@@ -24,14 +24,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T6J-Yt-gRi">
-                                <rect key="frame" x="107" y="403" width="200" height="90"/>
+                                <rect key="frame" x="32" y="403" width="350" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1o-Ct-OMt">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
                                         <color key="backgroundColor" red="0.87450980392156863" green="0.8784313725490196" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="uJe-3S-cFf"/>
-                                        </constraints>
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.2627450980392157" green="0.20784313725490194" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -40,7 +37,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCW-KO-BK1">
-                                        <rect key="frame" x="0.0" y="60" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="60" width="350" height="30"/>
                                         <color key="backgroundColor" red="0.87450980389999999" green="0.87843137250000003" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="0.26274509800000001" green="0.20784313730000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -74,7 +71,9 @@
                             <constraint firstItem="T6J-Yt-gRi" firstAttribute="centerY" secondItem="P6O-RA-kdu" secondAttribute="centerY" id="7hD-gw-1Dl"/>
                             <constraint firstItem="T6J-Yt-gRi" firstAttribute="centerX" secondItem="P6O-RA-kdu" secondAttribute="centerX" id="8Ky-bA-b65"/>
                             <constraint firstItem="Okg-x8-2a6" firstAttribute="centerX" secondItem="P6O-RA-kdu" secondAttribute="centerX" id="IQG-dX-A1w"/>
+                            <constraint firstItem="T6J-Yt-gRi" firstAttribute="leading" secondItem="Hsy-xT-on6" secondAttribute="leading" constant="32" id="Xbk-kP-h4g"/>
                             <constraint firstItem="mNc-6q-GV0" firstAttribute="centerX" secondItem="P6O-RA-kdu" secondAttribute="centerX" id="YwQ-LK-30v"/>
+                            <constraint firstItem="Hsy-xT-on6" firstAttribute="trailing" secondItem="T6J-Yt-gRi" secondAttribute="trailing" constant="32" id="hIz-8H-nQQ"/>
                             <constraint firstItem="Okg-x8-2a6" firstAttribute="top" secondItem="Hsy-xT-on6" secondAttribute="top" constant="36" id="pKJ-0Q-LvX"/>
                             <constraint firstItem="mNc-6q-GV0" firstAttribute="top" secondItem="Okg-x8-2a6" secondAttribute="bottom" constant="16" id="u4N-WV-GW7"/>
                             <constraint firstItem="Hsy-xT-on6" firstAttribute="bottom" secondItem="vUb-ZH-7sY" secondAttribute="bottom" constant="16" id="yN0-rh-Rpc"/>
@@ -390,6 +389,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="R7l-KL-WHF"/>
+                    <connections>
+                        <outlet property="nowPlayingCV" destination="1jd-fi-4fF" id="5i0-Ez-ht6"/>
+                        <outlet property="popularCV" destination="Bol-xd-uAq" id="NON-B7-gyE"/>
+                        <outlet property="topRatedCV" destination="KbC-6J-3l6" id="i40-mM-E8t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S18-Is-jhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -399,7 +403,9 @@
         <scene sceneID="mTF-qL-LyV">
             <objects>
                 <tabBarController id="dOw-tj-ptN" customClass="TMDBVC" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Eqs-hs-cEJ"/>
+                    <navigationItem key="navigationItem" id="Eqs-hs-cEJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle.fill" catalog="system" id="THZ-Oa-N7z"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ot1-U8-x7T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -435,6 +441,7 @@
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -7,13 +7,9 @@
 
 import UIKit
 
-class TMDBVC: UITabBarController {
+class TMDBVC: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        print("Hello from tabbar")
+        
     }
-    
-    
-
 }

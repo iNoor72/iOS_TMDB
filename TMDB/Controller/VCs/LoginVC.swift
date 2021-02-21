@@ -29,8 +29,12 @@ class LoginVC: UIViewController {
         }
         
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-          guard let strongSelf = self else { return }
-            print(error.debugDescription)
+            if error != nil {
+                //Change the rootVC to be the HomeVC, but HomeVC is not VC it's a TabbarVC
+                
+                //self?.view.window?.rootViewController =
+            }
+            
         }
         
     }

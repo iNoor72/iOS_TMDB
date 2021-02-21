@@ -237,6 +237,7 @@
 		7CEDBAEF25A8B79C0051CD11 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7CFAAD6225E18C00002722D8 /* FavCell.xib */,
 				7CEDBAC625A8B6440051CD11 /* LaunchScreen.storyboard */,
 				7CEDBABE25A8B6430051CD11 /* Main.storyboard */,
 			);
@@ -248,7 +249,6 @@
 			children = (
 				7C8D5B5725D72A6C0094FA36 /* Movie.swift */,
 				7CFAAD6125E18C00002722D8 /* FavCell.swift */,
-				7CFAAD6225E18C00002722D8 /* FavCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
