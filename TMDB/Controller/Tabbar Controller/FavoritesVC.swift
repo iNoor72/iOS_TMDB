@@ -14,9 +14,9 @@ class FavoritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     let array = ["A","B","C"]
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "FavCell", bundle: nil), forCellReuseIdentifier: Constants.FavCell)
     }
     
     //MARK: Delegation
@@ -34,7 +34,7 @@ class FavoritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.FavCell, for: indexPath) as! FavCell
         
-        //cell.movieName.text = array[indexPath.row]
+        cell.movieName.text = array[indexPath.row]
         return cell
     }
     

@@ -53,7 +53,7 @@
                 <outlet property="movieImage" destination="jnt-J0-dV4" id="gcQ-fp-zV1"/>
                 <outlet property="movieName" destination="4ft-d6-BBu" id="UBk-tH-8Zj"/>
             </connections>
-            <point key="canvasLocation" x="72.463768115942031" y="177.79017857142856"/>
+            <point key="canvasLocation" x="72.463768115942031" y="177.45535714285714"/>
         </tableViewCell>
     </objects>
     <resources>

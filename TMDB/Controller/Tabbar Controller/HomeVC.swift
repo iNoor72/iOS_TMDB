@@ -10,16 +10,6 @@ import Alamofire
 
 class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    //MARK:- CollectionView functions
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
-    }
-    
-    
     @IBOutlet weak var popularCV: UICollectionView!
     @IBOutlet weak var topRatedCV: UICollectionView!
     @IBOutlet weak var nowPlayingCV: UICollectionView!
@@ -35,34 +25,39 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         fetchTopRated()
         fetchNowPlaying()
     }
-}
-func fetchNowPlaying() {
-    let url = MovieRouter.nowPlaying
-    AF.request(url).responseDecodable { (response: (DataResponse<[Movie], AFError>)) in
-        switch response.result {
-        case .success(let movies):
-            print("Done")
-        case .failure(let error):
-            print(error.localizedDescription)
+    
+    
+    //MARK:- CollectionView functions
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = popularCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        return cell
+    }
+    func fetchNowPlaying() {
+        let url = MovieRouter.nowPlaying
+        AF.request(url).responseDecodable { (response: (DataResponse<[Movie], AFError>)) in
+            switch response.result {
+            case .success(let movies):
+                print("Done")
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
     }
     
+    func fetchTopRated() {
+        let url = MovieRouter.topRated
+        AF.request(url).responseDecodable { (response: (DataResponse<[Movie], AFError>)) in
+            switch response.result {
+            case .success(let movies):
+                print("Done")
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 
-func fetchTopRated() {
-    let url = MovieRouter.topRated
-    AF.request(url).responseDecodable { (response: (DataResponse<[Movie], AFError>)) in
-        switch response.result {
-        case .success(let movies):
-            print("Done")
-        case .failure(let error):
-            print(error.localizedDescription)
-        }
-        
-    }
-    
-    
-    
-    
-    
-}
