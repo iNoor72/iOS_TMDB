@@ -10,4 +10,5 @@ import Foundation
 struct Constants {
     static let API_key = "9011f3fdc6551ebe547f181c79680b66"
     static let FavCell = "FavoritesCell"
+    static let MovieCell = "MovieCell"
 }

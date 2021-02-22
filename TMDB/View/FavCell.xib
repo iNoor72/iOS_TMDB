@@ -33,9 +33,6 @@
                         <rect key="frame" x="181" y="171" width="21" height="18"/>
                         <color key="tintColor" red="0.93876898289999999" green="0.79321372509999999" blue="0.35282474759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <state key="normal" backgroundImage="heart" catalog="system"/>
-                        <connections>
-                            <action selector="favoriteClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LCZ-jC-uaA"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -49,7 +46,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="favoriteClicked" destination="t7m-xx-How" id="pRh-GQ-0ay"/>
                 <outlet property="movieImage" destination="jnt-J0-dV4" id="gcQ-fp-zV1"/>
                 <outlet property="movieName" destination="4ft-d6-BBu" id="UBk-tH-8Zj"/>
             </connections>

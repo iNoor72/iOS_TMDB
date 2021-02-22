@@ -11,9 +11,4 @@ class FavCell: UITableViewCell {
 
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieName: UILabel!
-    
-    
-    @IBAction func favoriteClicked(_ sender: UIButton) {
-        
-    }
 }

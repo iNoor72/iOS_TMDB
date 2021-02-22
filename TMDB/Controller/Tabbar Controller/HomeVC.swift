@@ -14,34 +14,47 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @IBOutlet weak var topRatedCV: UICollectionView!
     @IBOutlet weak var nowPlayingCV: UICollectionView!
     
+    let urlFetcher = URLSession_Networking()
+    let array = ["1","2","3"]
+    
     override func viewDidLoad() {
-        popularCV.delegate = self
+        //popularCV.delegate = self
         topRatedCV.delegate = self
-        nowPlayingCV.delegate = self
-        popularCV.dataSource = self
+        //nowPlayingCV.delegate = self
+//        popularCV.dataSource = self
         topRatedCV.dataSource = self
-        nowPlayingCV.dataSource = self
-        
+        //nowPlayingCV.dataSource = self
+        topRatedCV.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: "MovieCell")
+        fetchPopular()
         fetchTopRated()
-        fetchNowPlaying()
+//        fetchNowPlaying()
     }
     
     
-    //MARK:- CollectionView functions
+    //MARK:- Top Rated CollectionView functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = popularCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        let cell = topRatedCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        cell.movieName.text = "Noor"
+        cell.movieImage.backgroundColor = .brown
         return cell
     }
+    
+    //MARK:- Fetching Data Methods
+    
+    func fetchPopular() {
+        urlFetcher.fetchData()
+    }
+    
     func fetchNowPlaying() {
         let url = MovieRouter.nowPlaying
         AF.request(url).responseDecodable { (response: (DataResponse<[Movie], AFError>)) in
             switch response.result {
             case .success(let movies):
-                print("Done")
+                print("Done and Noor")
             case .failure(let error):
                 print(error.localizedDescription)
             }

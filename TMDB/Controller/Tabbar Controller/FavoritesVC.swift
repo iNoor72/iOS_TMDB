@@ -6,17 +6,25 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FavoritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let array = ["A","B","C"]
+    var favoriteMoviesArray : Results<Movie>? = nil
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "FavCell", bundle: nil), forCellReuseIdentifier: Constants.FavCell)
+        
+        fetchData()
+    }
+    
+    func fetchData() {
+        favoriteMoviesArray = realm.objects(Movie.self)
     }
     
     //MARK: Delegation
@@ -33,8 +41,6 @@ class FavoritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.FavCell, for: indexPath) as! FavCell
-        
-        cell.movieName.text = array[indexPath.row]
         return cell
     }
     

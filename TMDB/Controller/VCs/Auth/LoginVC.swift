@@ -33,11 +33,13 @@ class LoginVC: UIViewController {
                 //Change the rootVC to be the HomeVC, but HomeVC is not VC it's a TabbarVC
                 
                 //self?.view.window?.rootViewController =
+                
+                //Pass the user's info
+                //prepare() for segue
             }
             
         }
         
     }
-    
     
 }

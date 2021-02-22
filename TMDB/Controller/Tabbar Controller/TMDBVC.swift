@@ -8,8 +8,11 @@
 import UIKit
 
 class TMDBVC: UITabBarController {
-
+    
+    //Get user.name from the module after signing in/up
+    let user = ("Noor",19)
+    
     override func viewDidLoad() {
-        
+        navigationItem.title = "Welcome, \(user.0) !"
     }
 }
