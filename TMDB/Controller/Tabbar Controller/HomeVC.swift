@@ -18,15 +18,15 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     let array = ["1","2","3"]
     
     override func viewDidLoad() {
-        //popularCV.delegate = self
-        topRatedCV.delegate = self
+        popularCV.delegate = self
+//        topRatedCV.delegate = self
         //nowPlayingCV.delegate = self
-//        popularCV.dataSource = self
-        topRatedCV.dataSource = self
+        popularCV.dataSource = self
+//        topRatedCV.dataSource = self
         //nowPlayingCV.dataSource = self
-        topRatedCV.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: "MovieCell")
+        popularCV.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: Constants.MovieCell)
         fetchPopular()
-        fetchTopRated()
+//        fetchTopRated()
 //        fetchNowPlaying()
     }
     
@@ -37,7 +37,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = topRatedCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        let cell = popularCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
         cell.movieName.text = "Noor"
         cell.movieImage.backgroundColor = .brown
         return cell

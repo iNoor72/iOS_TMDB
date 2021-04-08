@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+
 struct URLSession_Networking {
     let popularURL = "https://api.themoviedb.org/3/movie/popular?api_key=\(Constants.API_key)&language=en-US&page=1"
     
@@ -22,7 +24,7 @@ struct URLSession_Networking {
         }
     }
     
-    func handler (data: Data?, response:URLResponse?, error:Error?) -> Void {
+    func handler (data: Data?, response:URLResponse?, error:Error?){
         if (error != nil) {
             debugPrint(error!)
             return

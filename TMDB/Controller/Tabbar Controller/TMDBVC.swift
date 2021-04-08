@@ -13,6 +13,6 @@ class TMDBVC: UITabBarController {
     let user = ("Noor",19)
     
     override func viewDidLoad() {
-        navigationItem.title = "Welcome, \(user.0) !"
+        navigationItem.title = "Welcome, \(user.0)!"
     }
 }
