@@ -19,32 +19,32 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jnt-J0-dV4">
                         <rect key="frame" x="48" y="16" width="135" height="135"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="135" id="eTL-rR-eDh"/>
-                            <constraint firstAttribute="width" constant="135" id="zZA-T3-5z4"/>
+                            <constraint firstAttribute="width" constant="135" id="5lh-Bn-Ka2"/>
+                            <constraint firstAttribute="height" constant="135" id="qeF-Sc-qPU"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovieName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ft-d6-BBu">
-                        <rect key="frame" x="16" y="167" width="99" height="25"/>
+                        <rect key="frame" x="16" y="167" width="99" height="52"/>
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7m-xx-How">
-                        <rect key="frame" x="181" y="170.5" width="21" height="18.5"/>
+                        <rect key="frame" x="185" y="183.5" width="21" height="18.5"/>
                         <color key="tintColor" red="0.93876898289999999" green="0.79321372509999999" blue="0.35282474759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <state key="normal" backgroundImage="heart" catalog="system"/>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4ft-d6-BBu" firstAttribute="top" secondItem="jnt-J0-dV4" secondAttribute="bottom" constant="16" id="30K-Mo-LaJ"/>
-                    <constraint firstItem="t7m-xx-How" firstAttribute="centerY" secondItem="4ft-d6-BBu" secondAttribute="centerY" id="Gna-6X-k1o"/>
-                    <constraint firstItem="4ft-d6-BBu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="J8R-ys-FVg"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="t7m-xx-How" secondAttribute="trailing" constant="12" id="Rrk-pP-ub7"/>
-                    <constraint firstItem="jnt-J0-dV4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="48" id="WDA-Ix-ryN"/>
-                    <constraint firstAttribute="trailing" secondItem="jnt-J0-dV4" secondAttribute="trailing" constant="48" id="Yka-2J-2uI"/>
-                    <constraint firstItem="jnt-J0-dV4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ZWd-Xp-gM9"/>
-                    <constraint firstItem="t7m-xx-How" firstAttribute="leading" secondItem="4ft-d6-BBu" secondAttribute="trailing" constant="66" id="hN9-p9-5kh"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="t7m-xx-How" secondAttribute="bottom" constant="29" id="mtN-Vd-aOb"/>
+                    <constraint firstItem="t7m-xx-How" firstAttribute="leading" secondItem="4ft-d6-BBu" secondAttribute="trailing" constant="70" id="4DB-IG-EI2"/>
+                    <constraint firstItem="4ft-d6-BBu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="6GX-R7-NxT"/>
+                    <constraint firstAttribute="trailing" secondItem="jnt-J0-dV4" secondAttribute="trailing" constant="47" id="ZOf-T6-KeO"/>
+                    <constraint firstItem="4ft-d6-BBu" firstAttribute="top" secondItem="jnt-J0-dV4" secondAttribute="bottom" constant="16" id="dk0-7T-2eG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="t7m-xx-How" secondAttribute="bottom" constant="16" id="j7e-Sk-fa2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="t7m-xx-How" secondAttribute="trailing" constant="8" id="lRX-LE-EVt"/>
+                    <constraint firstItem="jnt-J0-dV4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="48" id="oKQ-TW-RBI"/>
+                    <constraint firstItem="jnt-J0-dV4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="t9Y-Sy-Tkl"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4ft-d6-BBu" secondAttribute="bottom" id="vfg-Ri-uHA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
