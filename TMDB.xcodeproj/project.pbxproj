@@ -34,6 +34,7 @@
 		7CEDBAD325A8B6440051CD11 /* TMDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDBAD225A8B6440051CD11 /* TMDBTests.swift */; };
 		7CEDBADE25A8B6440051CD11 /* TMDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDBADD25A8B6440051CD11 /* TMDBUITests.swift */; };
 		7CEE7E8025B9D75D006456E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CEE7E7F25B9D75D006456E5 /* GoogleService-Info.plist */; };
+		7CF448F2264AFFB2009AE6CE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF448F1264AFFB2009AE6CE /* ProfileViewController.swift */; };
 		7CFAAD5A25E18AD2002722D8 /* MovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFAAD5925E18AD2002722D8 /* MovieRouter.swift */; };
 		7CFAAD6325E18C00002722D8 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFAAD6125E18C00002722D8 /* FavCell.swift */; };
 		7CFAAD6425E18C00002722D8 /* FavCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFAAD6225E18C00002722D8 /* FavCell.xib */; };
@@ -92,6 +93,7 @@
 		7CEDBADD25A8B6440051CD11 /* TMDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBUITests.swift; sourceTree = "<group>"; };
 		7CEDBADF25A8B6440051CD11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CEE7E7F25B9D75D006456E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7CF448F1264AFFB2009AE6CE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7CFAAD5925E18AD2002722D8 /* MovieRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRouter.swift; sourceTree = "<group>"; };
 		7CFAAD6125E18C00002722D8 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
 		7CFAAD6225E18C00002722D8 /* FavCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavCell.xib; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				7C698901262A29D8000CD491 /* TopRatedViewController.swift */,
 				7C698906262A29E1000CD491 /* NowPlayingViewController.swift */,
+				7CF448F1264AFFB2009AE6CE /* ProfileViewController.swift */,
 			);
 			path = CollectionViews;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			files = (
 				7C8D5B5825D72A6C0094FA36 /* Movie.swift in Sources */,
 				7C8D5B4B25D729230094FA36 /* URLSession_Networking.swift in Sources */,
+				7CF448F2264AFFB2009AE6CE /* ProfileViewController.swift in Sources */,
 				7C068F0625CB247D002D59CE /* FavoritesVC.swift in Sources */,
 				7CEDBAC325A8B6430051CD11 /* TMDB.xcdatamodeld in Sources */,
 				7C74F15225B9E3CD00181619 /* LoginVC.swift in Sources */,

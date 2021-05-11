@@ -30,6 +30,11 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 //        fetchNowPlaying()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     
     //MARK:- Top Rated CollectionView functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
