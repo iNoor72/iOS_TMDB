@@ -42,14 +42,38 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     //MARK:- CollectionView functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.popularCollectionView {
+            
+        }
+        else if collectionView == self.nowPlayingCollectionView {
+            
+        }
+        else {
+            
+        }
         return array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = popularCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
-        cell.movieName.text = "Noor"
-        cell.movieImage.backgroundColor = .brown
-        return cell
+        if collectionView == self.popularCollectionView {
+            let cell = popularCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+            cell.movieName.text = "Noor"
+            cell.movieImage.backgroundColor = .brown
+            return cell
+        }
+        else if collectionView == self.nowPlayingCollectionView {
+            let cell = nowPlayingCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+            cell.movieName.text = "Noor"
+            cell.movieImage.backgroundColor = .brown
+            return cell
+        }
+        else {
+            let cell = topRatedCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+            cell.movieName.text = "Noor"
+            cell.movieImage.backgroundColor = .brown
+            return cell
+        }
+        
     }
     
     //MARK:- Fetching Data Methods
