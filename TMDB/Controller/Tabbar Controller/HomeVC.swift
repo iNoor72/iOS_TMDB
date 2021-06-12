@@ -17,17 +17,21 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     let urlFetcher = URLSession_Networking()
     let array = ["1","2","3"]
     
+    let popularCollectionView = UICollectionView()
+    let topRatedCollectionView = UICollectionView()
+    let nowPlayingCollectionView = UICollectionView()
+    
     override func viewDidLoad() {
         popularCV.delegate = self
-//        topRatedCV.delegate = self
-        //nowPlayingCV.delegate = self
+        topRatedCV.delegate = self
+        nowPlayingCV.delegate = self
         popularCV.dataSource = self
-//        topRatedCV.dataSource = self
-        //nowPlayingCV.dataSource = self
+        topRatedCV.dataSource = self
+        nowPlayingCV.dataSource = self
         popularCV.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: Constants.MovieCell)
         fetchPopular()
-//        fetchTopRated()
-//        fetchNowPlaying()
+        fetchTopRated()
+        fetchNowPlaying()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +40,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     
-    //MARK:- Top Rated CollectionView functions
+    //MARK:- CollectionView functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return array.count
     }
