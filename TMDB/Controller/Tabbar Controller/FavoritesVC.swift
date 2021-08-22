@@ -19,7 +19,6 @@ class FavoritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "FavCell", bundle: nil), forCellReuseIdentifier: Constants.FavCell)
-        
         fetchData()
     }
     

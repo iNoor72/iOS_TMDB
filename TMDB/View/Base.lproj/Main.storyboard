@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DV4-eA-Xsu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dXO-cJ-Ydz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -165,11 +165,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.68627450980000004" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="7cA-gi-rCz" kind="relationship" relationship="viewControllers" id="V7Q-nk-oB6"/>
                         <segue destination="gBY-tV-7j1" kind="relationship" relationship="viewControllers" id="K7f-aJ-In5"/>
                         <segue destination="IwF-Ls-7Iz" kind="relationship" relationship="viewControllers" id="Z6Z-1X-SyI"/>
+                        <segue destination="NeZ-OM-gt6" kind="relationship" relationship="viewControllers" id="PSG-HT-Ayj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihn-R5-Fq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -198,6 +201,7 @@
                                 </state>
                                 <connections>
                                     <action selector="registerBtnPressed:" destination="LLG-ca-7D6" eventType="touchUpInside" id="KnE-1J-tC0"/>
+                                    <segue destination="mWL-hz-i0m" kind="show" id="iAr-C8-g18"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6Eg-5w-kvK">
@@ -251,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6X-Od-A7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="-132"/>
+            <point key="canvasLocation" x="1041" y="-306"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="tKb-HW-xsL">
@@ -276,14 +280,37 @@
                             <constraint firstItem="Oss-Fs-iXa" firstAttribute="top" secondItem="9wc-aO-Jiv" secondAttribute="top" constant="8" id="vUE-vb-lXg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" selectedImage="star.fill" catalog="system" id="Kt7-mg-g54"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.circle.fill" catalog="system" id="Kt7-mg-g54"/>
                     <connections>
                         <outlet property="tableView" destination="Oss-Fs-iXa" id="NtC-yi-vtG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yme-Lg-5oh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="298"/>
+            <point key="canvasLocation" x="2827.536231884058" y="297.99107142857139"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="5oC-kk-y0U">
+            <objects>
+                <viewController id="NeZ-OM-gt6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QVj-gO-Tmo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AbF-OJ-yEl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f46-hF-wIj"/>
+                        <color key="backgroundColor" red="0.031372549020000001" green="0.72941176470000002" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass.circle.fill" catalog="system" id="x9D-mF-Lb0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="081-tt-orj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2938" y="994"/>
         </scene>
         <!--Profile-->
         <scene sceneID="gIb-im-tut">
@@ -313,11 +340,11 @@
                         <viewLayoutGuide key="safeArea" id="d5E-WO-3iB"/>
                         <color key="backgroundColor" red="0.031015044080000002" green="0.73069274429999997" blue="0.63528758289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="1Ow-Th-JZ2"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="1Ow-Th-JZ2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yyi-h9-vRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2824.6376811594205" y="1005.8035714285713"/>
+            <point key="canvasLocation" x="2590" y="1690"/>
         </scene>
         <!--Home-->
         <scene sceneID="jtq-UW-N6p">
@@ -414,7 +441,7 @@
                             <constraint firstItem="Bol-xd-uAq" firstAttribute="top" secondItem="6r6-xF-TS4" secondAttribute="bottom" constant="8" id="sfG-7v-aMC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="R7l-KL-WHF"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.circle.fill" catalog="system" id="R7l-KL-WHF"/>
                     <navigationItem key="navigationItem" id="wCE-SR-JuD"/>
                     <connections>
                         <outlet property="nowPlayingCV" destination="1jd-fi-4fF" id="5i0-Ez-ht6"/>
@@ -445,10 +472,14 @@
             <point key="canvasLocation" x="-805.79710144927537" y="75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iAr-C8-g18"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="house.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="star.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

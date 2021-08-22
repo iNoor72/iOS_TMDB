@@ -13,6 +13,12 @@ class TMDBVC: UITabBarController {
     let user = ("Noor",19)
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         navigationItem.title = "Welcome, \(user.0)!"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
     }
 }

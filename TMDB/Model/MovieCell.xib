@@ -24,32 +24,31 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovieName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9a-k6-Y3A">
-                        <rect key="frame" x="16" y="175" width="91" height="39"/>
+                        <rect key="frame" x="16" y="175" width="154" height="39"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQF-mD-dYf">
-                        <rect key="frame" x="188" y="182" width="42" height="22"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3u-1o-LVb">
+                        <rect key="frame" x="186" y="175" width="28" height="39"/>
                         <color key="tintColor" red="0.93876898289999999" green="0.79321372509999999" blue="0.35282474759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <state key="normal" image="star" catalog="system"/>
-                        <connections>
-                            <action selector="favoriteClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="FgY-dL-qhD"/>
-                        </connections>
+                        <state key="normal" image="heart" catalog="system"/>
                     </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="E9a-k6-Y3A" firstAttribute="top" secondItem="mWz-dR-iHB" secondAttribute="bottom" constant="32" id="4YF-2F-HCB"/>
-                <constraint firstItem="E9a-k6-Y3A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="5xY-p0-bV2"/>
-                <constraint firstAttribute="bottom" secondItem="E9a-k6-Y3A" secondAttribute="bottom" constant="16" id="GcE-68-ZHp"/>
+                <constraint firstAttribute="bottom" secondItem="E9a-k6-Y3A" secondAttribute="bottom" constant="16" id="FJb-ll-x4o"/>
+                <constraint firstItem="E9a-k6-Y3A" firstAttribute="top" secondItem="mWz-dR-iHB" secondAttribute="bottom" constant="32" id="JEu-QT-hNk"/>
                 <constraint firstItem="mWz-dR-iHB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Kco-nJ-6W4"/>
+                <constraint firstAttribute="trailing" secondItem="Y3u-1o-LVb" secondAttribute="trailing" constant="16" id="NeO-YG-2tY"/>
                 <constraint firstItem="mWz-dR-iHB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="48" id="Smz-kF-UeO"/>
-                <constraint firstItem="DQF-mD-dYf" firstAttribute="leading" secondItem="E9a-k6-Y3A" secondAttribute="trailing" constant="81" id="ZIX-nF-Sgu"/>
                 <constraint firstAttribute="trailing" secondItem="mWz-dR-iHB" secondAttribute="trailing" constant="47" id="bGc-vd-3Tm"/>
-                <constraint firstAttribute="bottom" secondItem="DQF-mD-dYf" secondAttribute="bottom" constant="26" id="hQj-gk-iKP"/>
-                <constraint firstAttribute="trailing" secondItem="DQF-mD-dYf" secondAttribute="trailing" symbolic="YES" id="o7m-JB-dg9"/>
+                <constraint firstAttribute="trailing" secondItem="E9a-k6-Y3A" secondAttribute="trailing" constant="60" id="d6v-yO-Zab"/>
+                <constraint firstAttribute="bottom" secondItem="Y3u-1o-LVb" secondAttribute="bottom" constant="16" id="hzd-nG-RSa"/>
+                <constraint firstItem="E9a-k6-Y3A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="k9e-p9-D0P"/>
+                <constraint firstItem="Y3u-1o-LVb" firstAttribute="leading" secondItem="E9a-k6-Y3A" secondAttribute="trailing" constant="16" id="mbA-Tv-jR4"/>
+                <constraint firstItem="Y3u-1o-LVb" firstAttribute="top" secondItem="mWz-dR-iHB" secondAttribute="bottom" constant="32" id="yPC-9B-gEW"/>
             </constraints>
             <connections>
                 <outlet property="movieImage" destination="mWz-dR-iHB" id="diL-wD-p6P"/>
@@ -59,6 +58,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
     </resources>
 </document>

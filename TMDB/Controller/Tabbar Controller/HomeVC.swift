@@ -17,9 +17,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     let urlFetcher = URLSession_Networking()
     let array = ["1","2","3"]
     
-    let popularCollectionView = UICollectionView()
-    let topRatedCollectionView = UICollectionView()
-    let nowPlayingCollectionView = UICollectionView()
+    //let popularCollectionView = UICollectionView()
+    //let topRatedCollectionView = UICollectionView()
+    //let nowPlayingCollectionView = UICollectionView()
     
     override func viewDidLoad() {
         popularCV.delegate = self
@@ -29,6 +29,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         topRatedCV.dataSource = self
         nowPlayingCV.dataSource = self
         popularCV.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: Constants.MovieCell)
+        topRatedCV.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: Constants.MovieCell)
+        nowPlayingCV.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: Constants.MovieCell)
         fetchPopular()
         fetchTopRated()
         fetchNowPlaying()
@@ -42,11 +44,11 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     //MARK:- CollectionView functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.popularCollectionView {
-            
+        if collectionView == self.popularCV {
+            return array.count
         }
-        else if collectionView == self.nowPlayingCollectionView {
-            
+        else if collectionView == self.nowPlayingCV {
+            return array.count
         }
         else {
             
@@ -55,13 +57,13 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.popularCollectionView {
+        if collectionView == self.popularCV {
             let cell = popularCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
             cell.movieName.text = "Noor"
             cell.movieImage.backgroundColor = .brown
             return cell
         }
-        else if collectionView == self.nowPlayingCollectionView {
+        else if collectionView == self.nowPlayingCV {
             let cell = nowPlayingCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
             cell.movieName.text = "Noor"
             cell.movieImage.backgroundColor = .brown
@@ -73,7 +75,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             cell.movieImage.backgroundColor = .brown
             return cell
         }
-        
     }
     
     //MARK:- Fetching Data Methods

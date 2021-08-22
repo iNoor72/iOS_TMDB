@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,24 +24,26 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovieName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ft-d6-BBu">
-                        <rect key="frame" x="16" y="167" width="99" height="52"/>
+                        <rect key="frame" x="16" y="167" width="138" height="52"/>
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7m-xx-How">
-                        <rect key="frame" x="185" y="183.5" width="21" height="18.5"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEJ-E6-TFb">
+                        <rect key="frame" x="170" y="183" width="28" height="20"/>
                         <color key="tintColor" red="0.93876898289999999" green="0.79321372509999999" blue="0.35282474759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <state key="normal" backgroundImage="heart" catalog="system"/>
+                        <state key="normal" image="heart" catalog="system"/>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="t7m-xx-How" firstAttribute="leading" secondItem="4ft-d6-BBu" secondAttribute="trailing" constant="70" id="4DB-IG-EI2"/>
+                    <constraint firstItem="SEJ-E6-TFb" firstAttribute="leading" secondItem="4ft-d6-BBu" secondAttribute="trailing" constant="16" id="22U-F8-1P9"/>
                     <constraint firstItem="4ft-d6-BBu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="6GX-R7-NxT"/>
+                    <constraint firstItem="SEJ-E6-TFb" firstAttribute="top" secondItem="jnt-J0-dV4" secondAttribute="bottom" constant="32" id="C6C-He-poE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SEJ-E6-TFb" secondAttribute="trailing" constant="16" id="KeV-Ne-lXD"/>
                     <constraint firstAttribute="trailing" secondItem="jnt-J0-dV4" secondAttribute="trailing" constant="47" id="ZOf-T6-KeO"/>
                     <constraint firstItem="4ft-d6-BBu" firstAttribute="top" secondItem="jnt-J0-dV4" secondAttribute="bottom" constant="16" id="dk0-7T-2eG"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="t7m-xx-How" secondAttribute="bottom" constant="16" id="j7e-Sk-fa2"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="t7m-xx-How" secondAttribute="trailing" constant="8" id="lRX-LE-EVt"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4ft-d6-BBu" secondAttribute="trailing" constant="60" id="efQ-q1-kAH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="SEJ-E6-TFb" secondAttribute="bottom" constant="16" id="l5o-o4-ocl"/>
                     <constraint firstItem="jnt-J0-dV4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="48" id="oKQ-TW-RBI"/>
                     <constraint firstItem="jnt-J0-dV4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="t9Y-Sy-Tkl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="4ft-d6-BBu" secondAttribute="bottom" id="vfg-Ri-uHA"/>
