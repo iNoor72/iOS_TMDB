@@ -15,11 +15,10 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @IBOutlet weak var nowPlayingCV: UICollectionView!
     
     let urlFetcher = URLSession_Networking()
-    let array = ["1","2","3"]
     
-    //let popularCollectionView = UICollectionView()
-    //let topRatedCollectionView = UICollectionView()
-    //let nowPlayingCollectionView = UICollectionView()
+    var popArray = [Movie]()
+    var topArray = [Movie]()
+    var nowArray = [Movie]()
     
     override func viewDidLoad() {
         popularCV.delegate = self
@@ -44,35 +43,32 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     //MARK:- CollectionView functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.popularCV {
-            return array.count
+        if collectionView == popularCV {
+//            return popArray.count
+            return 3
         }
-        else if collectionView == self.nowPlayingCV {
-            return array.count
+        else if collectionView == nowPlayingCV {
+            return nowArray.count
         }
-        else {
-            
-        }
-        return array.count
+        return topArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.popularCV {
+        if collectionView == popularCV {
             let cell = popularCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+//            cell.movieName.text = popArray[indexPath.row].title
             cell.movieName.text = "Noor"
-            cell.movieImage.backgroundColor = .brown
+            
             return cell
         }
-        else if collectionView == self.nowPlayingCV {
+        else if collectionView == nowPlayingCV {
             let cell = nowPlayingCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
-            cell.movieName.text = "Noor"
-            cell.movieImage.backgroundColor = .brown
+            cell.movieName.text = nowArray[indexPath.row].title
             return cell
         }
         else {
             let cell = topRatedCV.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
-            cell.movieName.text = "Noor"
-            cell.movieImage.backgroundColor = .brown
+            cell.movieName.text = topArray[indexPath.row].title
             return cell
         }
     }
@@ -81,14 +77,22 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     func fetchPopular() {
         urlFetcher.fetchData()
+        DispatchQueue.main.async { [weak self] in
+            self?.popularCV.reloadData()
+        }
+        
     }
     
     func fetchNowPlaying() {
         let url = MovieRouter.nowPlaying
-        AF.request(url).responseDecodable { (response: (DataResponse<[Movie], AFError>)) in
+        AF.request(url).responseDecodable {[weak self] (response: (DataResponse<[Movie], AFError>)) in
             switch response.result {
             case .success(let movies):
-                print("Done and Noor")
+                self?.nowArray = movies
+                DispatchQueue.main.async {
+                    self?.nowPlayingCV.reloadData()
+                }
+                print("Data retrieved for nowPlaying using URLSession")
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -97,10 +101,14 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     func fetchTopRated() {
         let url = MovieRouter.topRated
-        AF.request(url).responseDecodable { (response: (DataResponse<[Movie], AFError>)) in
+        AF.request(url).responseDecodable {[weak self] (response: (DataResponse<[Movie], AFError>)) in
             switch response.result {
             case .success(let movies):
-                print("Done")
+                self?.topArray = movies
+                DispatchQueue.main.async {
+                    self?.topRatedCV.reloadData()
+                }
+                print("Data retrieved for topRated using URLSession")
             case .failure(let error):
                 print(error.localizedDescription)
             }

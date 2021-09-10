@@ -26,13 +26,13 @@ struct URLSession_Networking {
     
     func handler (data: Data?, response:URLResponse?, error:Error?){
         if (error != nil) {
-            debugPrint(error!)
+            debugPrint(error.debugDescription)
             return
         }
         
         if let safeData = data {
             let dataString = String(data: safeData, encoding: .utf8)!
-            print(dataString)
+            print("Data retrieved for popular using URLSession")
         }
     }
 }
